@@ -5,139 +5,137 @@
     You can change the times for each block of the code by using the integers after setup.
     This code is public. 
   */
-
-
   //
 
   //This sets each of the 19 pins to 'output' beforehand.
-  void setup() {
-    pinMode(1, OUTPUT);
-    pinMode(2, OUTPUT);
-    pinMode(3, OUTPUT);
-    pinMode(4, OUTPUT);
-    pinMode(5, OUTPUT);
-    pinMode(6, OUTPUT);
-    pinMode(7, OUTPUT);
-    pinMode(8, OUTPUT);
-    pinMode(9, OUTPUT);
-    pinMode(10, OUTPUT);
-    pinMode(11, OUTPUT);
-    pinMode(12, OUTPUT);
-    pinMode(13, OUTPUT);
-    pinMode(14, OUTPUT);
-    pinMode(15, OUTPUT);
-    pinMode(16, OUTPUT);
-    pinMode(17, OUTPUT);
-    pinMode(18, OUTPUT);
-    pinMode(19, OUTPUT);
-  }
+void setup() {
+  pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(14, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(16, OUTPUT);
+  pinMode(17, OUTPUT);
+  pinMode(18, OUTPUT);
+  pinMode(19, OUTPUT);
+}
   //Here are the integers to change the time of the individual waves
-  int apples=350;
-  int butters=50;
-  int justabitmore=20;
-  int sadness=100
+int apples=350;
+int butters=50;
+int justabitmore=20;
+int sadness=100;
   //This loop will repeat the sequence forever.
-  void loop() {
-    //starts with a single 2 second pulse of all pins.
+void loop() {
+  //starts with a single 2 second pulse of all pins.
+  digitalWrite(1, HIGH);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+  digitalWrite(6, HIGH);
+  digitalWrite(7, HIGH);
+  digitalWrite(8, HIGH);    
+  digitalWrite(9, HIGH);
+  digitalWrite(10, HIGH);
+  digitalWrite(11, HIGH);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, HIGH);
+  digitalWrite(14, HIGH);
+  digitalWrite(15, HIGH);
+  digitalWrite(16, HIGH);
+  digitalWrite(17, HIGH);
+  digitalWrite(18, HIGH);
+  digitalWrite(19, HIGH);
+  delay(2000);
+  digitalWrite(1,LOW);
+  digitalWrite(2,LOW);
+  digitalWrite(3,LOW);
+  digitalWrite(4,LOW);
+  digitalWrite(5,LOW);
+  digitalWrite(6,LOW);
+  digitalWrite(7,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(10,LOW);
+  digitalWrite(11,LOW);
+  digitalWrite(12,LOW);
+  digitalWrite(13,LOW);
+  digitalWrite(14,LOW);
+  digitalWrite(15,LOW);
+  digitalWrite(16,LOW);
+  digitalWrite(17,LOW);
+  digitalWrite(18,LOW);
+  digitalWrite(19,LOW);
+  delay(2000);
+  //pulse is over. Now it will wave across every 3 pins. 
+  //It should wave 4 or 5 times. No telling without experience.
+  //Each wave will last slightly longer than the previous one.
+  //Each pulse has to turn on new pins and disable the old ones.
+  for(int x=0; x<5; x++) {
     digitalWrite(1, HIGH);
+    delay(250);
+    digitalWrite(1, LOW);
     digitalWrite(2, HIGH);
+    delay(250);
+    digitalWrite(2, LOW);
     digitalWrite(3, HIGH);
+    delay(250);
+    digitalWrite(3, LOW);
+    digitalWrite(1, HIGH);
     digitalWrite(4, HIGH);
+    delay(300);
+    digitalWrite(1, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(2, HIGH);
     digitalWrite(5, HIGH);
+    delay(300);
+    digitalWrite(2, LOW);
+    digitalWrite(5, LOW);
+    digitalWrite(3, HIGH);
     digitalWrite(6, HIGH);
+    delay(300);
+    digitalWrite(3, LOW);
+    digitalWrite(6, LOW);
+    digitalWrite(1, HIGH);
+    digitalWrite(4, HIGH);
     digitalWrite(7, HIGH);
-    digitalWrite(8, HIGH);    
+    delay(350);
+    digitalWrite(1, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(7, LOW);
+    digitalWrite(2, HIGH);
+    digitalWrite(5, HIGH);
+    digitalWrite(8, HIGH);
+    delay(350);
+    digitalWrite(2, LOW);
+    digitalWrite(5, LOW);
+    digitalWrite(8, LOW);
+    digitalWrite(3, HIGH);
+    digitalWrite(6, HIGH);
     digitalWrite(9, HIGH);
+    delay(350);
+    digitalWrite(3, LOW);
+    digitalWrite(6, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(1, HIGH);
+    digitalWrite(4, HIGH);
+    digitalWrite(7, HIGH);
     digitalWrite(10, HIGH);
-    digitalWrite(11, HIGH);
-    digitalWrite(12, HIGH);
-    digitalWrite(13, HIGH);
-    digitalWrite(14, HIGH);
-    digitalWrite(15, HIGH);
-    digitalWrite(16, HIGH);
-    digitalWrite(17, HIGH);
-    digitalWrite(18, HIGH);
-    digitalWrite(19, HIGH);
-    delay(2000);
-    digitalWrite(1,LOW);
-    digitalWrite(2,LOW);
-    digitalWrite(3,LOW);
-    digitalWrite(4,LOW);
-    digitalWrite(5,LOW);
-    digitalWrite(6,LOW);
-    digitalWrite(7,LOW);
-    digitalWrite(8,LOW);
-    digitalWrite(9,LOW);
-    digitalWrite(10,LOW);
-    digitalWrite(11,LOW);
-    digitalWrite(12,LOW);
-    digitalWrite(13,LOW);
-    digitalWrite(14,LOW);
-    digitalWrite(15,LOW);
-    digitalWrite(16,LOW);
-    digitalWrite(17,LOW);
-    digitalWrite(18,LOW);
-    digitalWrite(19,LOW);
-    delay(2000);
-    //pulse is over. Now it will wave across every 3 pins. 
-    //It should wave 4 or 5 times. No telling without experience.
-    //Each wave will last slightly longer than the previous one.
-    //Each pulse has to turn on new pins and disable the old ones.
-    for(int x=0; x<5; x++) {
-      digitalWrite(1, HIGH);
-      delay(250);
-      digitalWrite(1, LOW);
-      digitalWrite(2, HIGH);
-      delay(250);
-      digitalWrite(2, LOW);
-      digitalWrite(3, HIGH);
-      delay(250);
-      digitalWrite(3, LOW);
-      digitalWrite(1, HIGH);
-      digitalWrite(4, HIGH);
-      delay(300);
-      digitalWrite(1, LOW);
-      digitalWrite(4, LOW);
-      digitalWrite(2, HIGH);
-      digitalWrite(5, HIGH);
-      delay(300);
-      digitalWrite(2, LOW);
-      digitalWrite(5, LOW);
-      digitalWrite(3, HIGH);
-      digitalWrite(6, HIGH);
-      delay(300);
-      digitalWrite(3, LOW);
-      digitalWrite(6, LOW);
-      digitalWrite(1, HIGH);
-      digitalWrite(4, HIGH);
-      digitalWrite(7, HIGH);
-      delay(350);
-      digitalWrite(1, LOW);
-      digitalWrite(4, LOW);
-      digitalWrite(7, LOW);
-      digitalWrite(2, HIGH);
-      digitalWrite(5, HIGH);
-      digitalWrite(8, HIGH);
-      delay(350);
-      digitalWrite(2, LOW);
-      digitalWrite(5, LOW);
-      digitalWrite(8, LOW);
-      digitalWrite(3, HIGH);
-      digitalWrite(6, HIGH);
-      digitalWrite(9, HIGH);
-      delay(350);
-      digitalWrite(3, LOW);
-      digitalWrite(6, LOW);
-      digitalWrite(9, LOW);
-      digitalWrite(1, HIGH);
-      digitalWrite(4, HIGH);
-      digitalWrite(7, HIGH);
-      digitalWrite(10, HIGH);
-      delay(375);
-      digitalWrite(1, LOW);
-      digitalWrite(4, LOW);
-      digitalWrite(7, LOW);
-      digitalWrite(10, LOW);
+    delay(375);
+    digitalWrite(1, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(7, LOW);
+    digitalWrite(10, LOW);
       digitalWrite(2, HIGH);
       digitalWrite(5, HIGH);
       digitalWrite(8, HIGH);
@@ -262,8 +260,8 @@
       digitalWrite(5, LOW);
       digitalWrite(6, LOW);
       digitalWrite(7, LOW);
-      digitalWrite(8, LOW);    
-      delay(apples);
+      digitalWrite(8, LOW);
+      delay(apples);    
       digitalWrite(9, HIGH);
       digitalWrite(10, HIGH);
       digitalWrite(11, HIGH);
